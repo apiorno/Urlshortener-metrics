@@ -13,10 +13,9 @@ rule_files:
 
 scrape_configs:
   # Use DNS Service discovery
-  ## https://github.com/teamzerolabs/api-express-exporter
   - job_name: api
     dns_sd_configs:
-      - { names: [ api ], type: A, port: 9991 }
+      - { names: [ api ], type: A, port: 8080 }
     metrics_path: /metrics
   - job_name: node-exporter
     dns_sd_configs:
